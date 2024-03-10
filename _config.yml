@@ -20,11 +20,16 @@ author: Some Person
 ###############################################
 
 navbar-links:
+  Publication: "Publication"
   About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  Fine More:
+    - Github: https://github.com/V-Enzo
+    - LinkedIn: https://www.linkedin.com/in/charles-li-96a6a4117/
+    - Google Scholar: https://scholar.google.com/citations?user=KBKjnLsAAAAJ&hl=zh-CN
+  # Resources:
+  #   - Beautiful Jekyll: "https://beautifuljekyll.com"
+  #   - Learn markdown: "https://www.markdowntutorial.com/"
+  # Author's home: "https://deanattali.com"
 
 ################
 # --- Logo --- #
@@ -50,16 +55,15 @@ round-avatar: true
 # You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
-  email: "someone@example.com"
-  rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  facebook: deanattali
-  github: daattali
-  twitter: daattali
-  patreon: DeanAttali
-  youtube: "@daattali"
+  email: "xiaochanglilxc@gmail.com"
+  # facebook: deanattali
+  github: V-Enzo
+  # twitter: daattali
+  # patreon: DeanAttali
+  # youtube: "@daattali"
 #  medium: yourname
 #  reddit: yourname
-#  linkedin: daattali
+ linkedin: charles-li-96a6a4117/
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -74,7 +78,7 @@ social-network-links:
 #  mastodon: instance.url/@username
 #  bluesky: yourname
 #  ORCID: your ORCID ID
-#  google-scholar: your google scholar
+ google-scholar: citations?user=KBKjnLsAAAAJ&hl=zh-CN
 #  discord: "invite_code" or "users/userid" or "invite/invite_code" 
 #  kaggle: yourname
 #  hackerrank: yourname
@@ -83,7 +87,7 @@ social-network-links:
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: This website is a virtual proof that I'm awesome
+rss-description: Charles(Xiaochang) Li's website
 
 ###########################
 # --- General options --- #
@@ -98,7 +102,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "MyWebsite.com"
+url-pretty: "https//v-enzo.github.io"
 
 # Add the website title to the title of every page
 title-on-all-pages: true
@@ -124,7 +128,7 @@ edit_page_button: true
 navbar-var-length: false
 
 # The keywords to associate with your website, for SEO purposes
-#keywords: "my,list,of,keywords"
+keywords: "Xiaochang Li, Xiaochang(Charles) Li, Charles Li, NLP, LLM"
 
 ######################################
 # --- Colours / background image --- #
