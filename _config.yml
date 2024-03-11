@@ -21,7 +21,7 @@ author: Charles(Xiaochang) Li
 
 navbar-links:
   Publication: "publication"
-  About Me: "aboutme"
+  # About Me: "aboutme"
   Fine More:
     - Github: https://github.com/V-Enzo
     - LinkedIn: https://www.linkedin.com/in/charles-li-96a6a4117/
