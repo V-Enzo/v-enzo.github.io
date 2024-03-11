@@ -20,7 +20,7 @@ author: Charles(Xiaochang) Li
 ###############################################
 
 navbar-links:
-  Publication: "Publication"
+  Publication: "publication"
   About Me: "aboutme"
   Fine More:
     - Github: https://github.com/V-Enzo
