@@ -1,86 +1,461 @@
 ---
 layout: page
-title: Charles Li
-subtitle: Welcome to my personal website!
+title: ""
+share-title: "Charles Li W&M CS Ph.D."
+show-avatar: false
 ---
-<div>
-    <p>
-        Hi, there! My name is Charles(Xiaochang) Li. I am currently a (2022-x)-year Computer Science Ph.D. student at William&Mary. I am fortunately advised by <a href="https://shj1987.github.io/">Prof. Huajie Shao</a>. Prior to the Ph.D. journey, I received my M.S. degree of Data Science from <a href="https://dase.ecnu.edu.cn/main.htm">East China Normal University</a> fortunately advised by <a href="https://faculty.ecnu.edu.cn/_s37/lxs2/main.psp">Prof. Xuesong Lu</a> and <a href="https://faculty.ecnu.edu.cn/_s37/dqw/main.psp">Prof. Qiwen Dong</a>, focusing on Natural Language Processing and Data Mining.
-    </p>
-    <p>
-        Currently, my research interest focuses on <strong>Foundation Model and Multi-Modal Reasoning</strong>. My goal is to empower multi-modal models with reasoning capabilities to solve complex real-world problems like human.
-  
-    </p>
-    <p>
-        Recently, I have proposed a knowledge-guided foundation model for network traffic classification and generation tasks, which is still under review. 
-        Besides, I am actively working on multi-modal reasoning, any collaboration is welcome!
-    </p>
-    <p>
-        <strong>I am open to various forms of research collaboration.</strong> I am also open to any questions and discussions on ML, NLP and LLM. Feel free to leave any comments or send me an <a href="mailto:xiaochanglilxc@gmail.com">email</a>! Looking forward to hear from you!
-    </p>
-    <p>
-        I enjoy watching good movies, and listening to music during my spare time. Besides, I like sports, including playing basketball, weight lifting, skiing and so on.
-    </p>
+<style>
+/* Custom width for this page - match Qineng's layout */
+.col-xl-8.offset-xl-2.col-lg-10.offset-lg-1 {
+  flex: 0 0 90% !important;
+  max-width: 90% !important;
+  margin-left: 5% !important;
+  margin-right: 5% !important;
+}
+/* Match Qineng's typography */
+.name-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  color: #333;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.position-title {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1.2rem;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+.bio-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.highlight-text {
+  color: #dc3545;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 1.5rem 0;
+}
+.social-links {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+.social-links a {
+  color: #666;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+/* Social media icons styling */
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.contact-icons {
+  display: flex;
+  align-items: center;
+}
+.contact-email {
+  font-size: 16px;
+}
+.social-icon i {
+  color: #111;
+  transition: color 0.2s ease-in-out;
+}
+.social-icon i:hover {
+  color: #039;
+}
+.social-divider {
+  color: #666;
+}
+/* Font family to match Qineng's style */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Navbar customizations with William & Mary green */
+.navbar-custom {
+  padding-top: 0.4rem !important;
+  padding-bottom: 0.4rem !important;
+  background: #004E38 !important;
+  border-bottom: none !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+}
+
+@media (min-width: 1200px) {
+  .navbar-custom {
+    padding-top: 0.4rem !important;
+    padding-bottom: 0.4rem !important;
+  }
+}
+
+.navbar-custom .navbar-brand {
+  display: block !important;
+  font-size: 1.3rem !important;
+  padding: 0.4rem 1.5rem !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+
+.navbar-custom .navbar-nav {
+  margin-left: auto !important;
+  justify-content: flex-end !important;
+}
+
+.navbar-custom .container {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  font-size: 1.1rem !important;
+  padding: 0.4rem 1.5rem !important;
+  color: #ffffff !important;
+  text-transform: none !important;
+  letter-spacing: 0.5px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  border-radius: 6px !important;
+  margin: 0 0.2rem !important;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offset for anchor links to account for fixed navbar */
+section {
+  padding-top: 80px; /* Adjust this value based on navbar height */
+  margin-top: -80px; /* Pull content back up */
+}
+
+/* Special case for home section to maintain proper spacing */
+#home {
+  padding-top: 15px;
+  margin-top: 0;
+}
+
+.intro-header {
+  margin: 5.0rem 0 1rem !important;
+}
+
+</style>
+
+<section id="home">
+<div style="display: flex; align-items: center; margin-bottom: 20px;">
+    <div style="flex-shrink: 0; margin-right: 25px;">
+        <img src="/assets/img/profile_img.png" alt="Charles Li" style="width: 200px; height: 240px; object-fit: cover; border-radius: 8px; border: 2px solid #ddd;">
+    </div>
+    <div style="flex: 1;">
+        <h1 class="name-title">Charles (Xiaochang) Li</h1>
+        <div class="position-title">CS Ph.D. Student · William & Mary</div>
+        
+        <div class="bio-text">
+            I am a Ph.D. student in Computer Science at <a href="https://www.wm.edu/">William & Mary</a> since 2022, fortunately advised by <a href="https://huajieshao.github.io/">Prof. Huajie Shao</a>. My research focuses on <strong>Foundation Models and Multi-Modal Reasoning</strong>, aiming to empower multi-modal models with reasoning capabilities for complex real-world problems. Before my Ph.D., I received my M.S. in Data Science from <a href="https://dase.ecnu.edu.cn/main.htm">East China Normal University</a> fortunately advised by <a href="https://faculty.ecnu.edu.cn/_s37/lxs2/main.psp">Prof. Xuesong Lu</a> and <a href="https://faculty.ecnu.edu.cn/_s37/dqw/main.psp">Prof. Qiwen Dong</a>, focusing on Natural Language Processing and Data Mining.
+        </div>
+        
+        <div class="highlight-text">
+            I welcome research collaborations on (M)LLMs, Reasoning — Please reach out!
+        </div>
+        
+        <div class="contact-row">
+            <div class="contact-icons">
+                <span>
+                    <a target="_blank" href="https://scholar.google.com/citations?user=KBKjnLsAAAAJ&hl=zh-CN" aria-label="Google Scholar">
+                        <span class="social-icon"><i class="ai ai-google-scholar ai-lg"></i></span>
+                    </a>
+                    <span class="social-divider">&nbsp;/&nbsp;</span>
+                </span>
+                <span>
+                    <a target="_blank" href="https://github.com/V-Enzo" aria-label="GitHub">
+                        <span class="social-icon"><i class="fab fa-github fa-lg"></i></span>
+                    </a>
+                    <span class="social-divider">&nbsp;/&nbsp;</span>
+                </span>
+                <span>
+                    <a target="_blank" href="https://www.linkedin.com/in/charles-li-96a6a4117/" aria-label="LinkedIn">
+                        <span class="social-icon"><i class="fab fa-linkedin fa-lg"></i></span>
+                    </a>
+                    <span class="social-divider">&nbsp;/&nbsp;</span>
+                </span>
+                <span>
+                    <a target="_blank" href="#" aria-label="Curriculum Vitae">
+                        <span class="social-icon"><i class="far fa-file-alt fa-lg"></i></span>
+                    </a>
+                </span>
+            </div>
+            <div class="contact-email">
+                <strong>Email:</strong> xli59 [at] wm [dot] edu
+            </div>
+        </div>
+    </div>
 </div>
-<div>
-    <h2>Personal News</h2>
+
 </div>
-<div>
-    <ul style="height: 200px; overflow: auto">
-        <li>
-            [Mar, 2024] Excited to share that our workshop paper <a href="https://arxiv.org/abs/2402.03646">[NetBench: A Large-Scale and Comprehensive Network Traffic Benchmark Dataset for Foundation Models]</a> has been accepted by FMSys Workshop 2024!
+</section>
+
+<section id="research">
+<div style="margin: 2rem 0;">
+    <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1rem; color: #333;">Research Interests</h2>
+    
+    <div style="margin-bottom: 1rem;">
+        <strong>Research vision:</strong> I study how foundation models can be used for solving real-world problem with reasoning capabilities, with applications in network traffic, software, and systems.
+    </div>
+    
+    <ul style="list-style: disc; padding-left: 20px;">
+        <li style="margin-bottom: 1rem;">
+            <strong>Foundation Model Building and Evaluation.</strong> (1) Training knowledge-guided foundation models for network traffic <a href="https://arxiv.org/abs/2402.03646" style="color: #007bff; text-decoration: none;">[Lens]</a>, <a href="https://arxiv.org/abs/2403.10319" style="color: #007bff; text-decoration: none;">[NetBench]</a> (2) Evaluation of foundation models in software engineering <a href="https://arxiv.org/pdf/2601.21070" style="color: #007bff; text-decoration: none;">[BEHELM]</a>
         </li>
-        <li>
-            [Mar, 2024] Excited to share our network foundation models at <a href="https://dmv-sec-workshop.github.io/">DMV Security Workshop 2024</a>. Thank you for the organizer and all attendees!
+        
+        <li style="margin-bottom: 1rem;">
+            <strong>Foundation Model Steering.</strong> Test-time steering methods for improving foundation model behavior without additional training. <a href="https://odesteer.github.io/" style="color: #007bff; text-decoration: none;">[ODESteer]</a>
         </li>
-        <li>
-            [Jan, 2024] Thrilled to share that I am qualified to be a Ph.d. candidate at William&Mary!
+        
+        <li style="margin-bottom: 1rem;">
+            <strong>Foundation Model Deployment.</strong> Personalized privacy-preserving distributed learning for foundation models on heterogeneous edge devices. <a href="https://arxiv.org/pdf/2507.17228" style="color: #007bff; text-decoration: none;">[P3SL]</a>
         </li>
     </ul>
 </div>
+
+</div>
+</section>
+
+<section id="news">
 <div>
-    <h2 id="publication">Publication</h2>
-    <p>(“*” indicates equal contribution)</p>
-    <h3 id="conference-paper">Conference Papers</h3>
+    <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1rem; color: #333;">News</h2>
+</div>
+<div>
+    <div style="height: 300px; overflow: auto; padding: 10px; font-size: 18px; line-height: 1.5;">
+        <p style="margin: 2px 0;"><strong>2026.06:</strong> 🎉 Paper <a href="https://arxiv.org/abs/2402.03646">Lens: A knowledge-guided foundation models for network traffic</a> accepted by <strong>TMLR</strong>!</p>
+        <p style="margin: 2px 0;"><strong>2026.03:</strong> 🎉 Paper <a href="https://westworldrobot.github.io/">Westworld</a> accepted by <strong>ICML 2026 Spotlight (top 2.2%)</strong>!</p>
+        <p style="margin: 2px 0;"><strong>2026.03:</strong> 🎉 Paper <a href="https://mainarke.github.io/assets/papers/kdd26_vishnu.pdf">OmniVul</a> accepted by <strong>KDD 2026</strong>!</p>
+        <p style="margin: 2px 0;"><strong>2026.01:</strong> 🎉 Paper <a href="https://odesteer.github.io/">ODESteer</a> accepted by <strong>ICLR 2026</strong>!</p>
+        <p style="margin: 2px 0;"><strong>2025.12:</strong> 🎉 Paper <a href="https://arxiv.org/pdf/2601.21070">BEHELM</a> accepted by <strong>FORGE 2026</strong>!</p>
+        <p style="margin: 2px 0;"><strong>2025.07:</strong> 🎉 Paper <a href="https://arxiv.org/pdf/2507.17228">P3SL</a> accepted by <strong>ICCCN 2025</strong>!</p>
+        <p style="margin: 2px 0;"><strong>2024.03:</strong> 🎉 Paper <a href="https://arxiv.org/abs/2402.03646">NetBench</a> accepted by <strong>FMSys Workshop 2024</strong>!</p>
+        <p style="margin: 2px 0;"><strong>2024.01:</strong> 🎓 Qualified to be a Ph.D. candidate at <strong>William & Mary</strong>!</p>
+    </div>
+</div>
+</div>
+</section>
+
+<section id="publications">
+<div>
+    <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1rem; color: #333;">Publications</h2>
+    <p>("*" indicates equal contribution, "†" indicates corresponding author/co-advisor)</p>
     <ol>
-        <li>
-            <strong>Xiaochang Li</strong>, Chen Qian, et al.,
-            <strong>Lens: A Knowledge-Guided Foundation Model for Network Traffic in Cybersecurity</strong>, Under Review.
-            <a href="https://arxiv.org/abs/2402.03646">[paper]</a>
+        <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+            <div style="flex-shrink: 0; margin-right: 20px;">
+                <img src="/assets/img/Lens.png" alt="Lens Method Overview" style="width: 350px; height: 200px; object-fit: contain; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+            <div style="flex: 1;">
+                <div style="margin-bottom: 8px;">
+                    <strong style="font-size: 18px;">Lens: A Knowledge-Guided Foundation Model for Network Traffic</strong>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <span style="font-size: 16px;"><strong>Xiaochang Li</strong>, Chen Qian, Qineng Wang, Jiangtao Kong, Yuchen Wang, Ziyu Yao, Bo Ji, Long Cheng, Gang Zhou, Huajie Shao</span>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <span style="background: #007bff; color: white; padding: 4px 10px; font-size: 16px; font-weight: bold; border-radius: 3px; margin-right: 8px;">TMLR</span>
+                    <a href="https://arxiv.org/abs/2402.03646" style="color: #007bff; text-decoration: none; font-size: 16px;">[Paper]</a>
+                    <a href="https://github.com/V-Enzo/Lens-foundation-model-for-network-traffic" style="color: #007bff; text-decoration: none; font-size: 16px;">[Code]</a>
+                </div>
+                <div>
+                    <span style="color: #666; line-height: 1.3; font-size: 14px;">A knowledge-guided foundation model for network traffic that outperforms baselines on 8 of 12 classification tasks (96.33% avg. accuracy) and generates high-fidelity traffic with up to +30.46% accuracy and +33.3% F1 in fuzzing tests.</span>
+                </div>
+            </div>
         </li>
-        <li>
-            Chen Qian*, <strong>Xiaochang Li*</strong>, Qineng Wang, Gang Zhou, Huajie Shao.,
-            <strong>NetBench: A Large-Scale and Comprehensive Network Traffic Benchmark Dataset for Foundation Models</strong> FMSys 2024
-            <a href="https://arxiv.org/abs/2403.10319">[paper]</a>
+        <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+            <div style="flex-shrink: 0; margin-right: 20px;">
+                <img src="/assets/img/westworld.png" alt="westworld Method Overview" style="width: 350px; height: 200px; object-fit: contain; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+            <div style="flex: 1;">
+                <div style="margin-bottom: 8px;">
+                    <strong style="font-size: 18px;">WestWorld: A Knowledge-Encoded Scalable Trajectory World Model for Diverse Robotic Systems</strong>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <span style="font-size: 16px;">Yuchen Wang*, Jiangtao Kong*, Sizhe Wei, <strong>Xiaochang Li</strong>, Haohong Lin, Hongjue Zhao, Tianyi Zhou, Lu Gan, Huajie Shao</span>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <span style="background: #007bff; color: white; padding: 4px 10px; font-size: 16px; font-weight: bold; border-radius: 3px; margin-right: 8px;">ICML 2026 Spotlight (top 2.2%)</span>
+                    <a href="https://westworldrobot.github.io/" style="color: #007bff; text-decoration: none; font-size: 16px;">[Website]</a>
+                    <a href="https://arxiv.org/pdf/2603.14392" style="color: #007bff; text-decoration: none; font-size: 16px;">[Paper]</a>
+                    <a href="https://github.com/511205787/WestWorld" style="color: #007bff; text-decoration: none; font-size: 16px;">[Code]</a>
+                </div>
+                <div>
+                    <span style="color: #666; line-height: 1.3; font-size: 14px;">Westworld achieves significant improvements zero- and few-shot trajectory prediction significantly with strong scalability and great performance improvement on downstream model-based control.</span>
+                </div>
+            </div>
         </li>
-        <!-- <li>
-            Qineng Wang, Chen Qian, <strong>Xiaochang Li</strong>, Ziyu Yao, Huajie Shao.,
-            <strong>Lens: A Foundation Model for Network Traffic in Cybersecurity</strong> arxiv.
-            <a href="https://arxiv.org/abs/2402.03646">[paper]</a>
-        </li> -->
-        <li>
-            <strong>Xiaochang Li</strong>, Bei Chen, Xuesong Lu.,
-            <strong>Discovering Traveling Companions using Autoencoders</strong> arxiv.
-            <a href="https://arxiv.org/abs/2007.11735">[paper]</a>
+        <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+            <div style="flex-shrink: 0; margin-right: 20px;">
+                <img src="/assets/img/omnivul.png" alt="OmniVul Overview" style="width: 350px; height: 200px; object-fit: contain; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+            <div style="flex: 1;">
+                <div style="margin-bottom: 8px;">
+                    <strong style="font-size: 18px;">OmniVul: A Holistic, Multi-Turn Conversational Benchmark for LLM-Based Vulnerability Assessment</strong>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <span style="font-size: 16px;">Vishnu Teja Kandalam, Viet Duong, <strong>Xiaochang Li</strong>, Minghui Yin, Vamsi Shankar Simhadri, Hung Pham, Huajie Shao, Xiaokuan Zhang, Yue Xiao</span>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <span style="background: #007bff; color: white; padding: 4px 10px; font-size: 16px; font-weight: bold; border-radius: 3px; margin-right: 8px;">KDD 2026</span>
+                    <a href="https://mainarke.github.io/assets/papers/kdd26_vishnu.pdf" style="color: #007bff; text-decoration: none; font-size: 16px;">[Paper]</a>
+                </div>
+                <div>
+                    <span style="color: #666; line-height: 1.3; font-size: 14px;">OmniVul comprises 2,000 CVEs with question–answer pairs spanning 23 attributes, including detection, code localization, root cause analysis, and patch suggestion, and the evaluation against 5 SOTA LLMs demonstrates the lack of critical reasoning capabilities for reliable vulnerability assessment.</span>
+                </div>
+            </div>
+        </li>
+        <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+            <div style="flex-shrink: 0; margin-right: 20px;">
+                <img src="/assets/img/ODESteer.png" alt="ODESteer Method Overview" style="width: 350px; height: 200px; object-fit: contain; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+            <div style="flex: 1;">
+                <div style="margin-bottom: 8px;">
+                    <strong style="font-size: 18px;">ODESteer: A Unified ODE-Based Steering Framework for LLM Alignment</strong>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <span style="font-size: 16px;">Hongjue Zhao*, Haosen Sun*, Jiangtao Kong, <strong>Xiaochang Li</strong>, Qineng Wang, Liwei Jiang, Qi Zhu, Tarek Abdelzaher, Yejin Choi, Manling Li†, Huajie Shao†</span>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <span style="background: #007bff; color: white; padding: 4px 10px; font-size: 16px; font-weight: bold; border-radius: 3px; margin-right: 8px;">ICLR 2026</span>
+                    <a href="https://odesteer.github.io/" style="color: #007bff; text-decoration: none; font-size: 16px;">[Website]</a>
+                    <a href="https://openreview.net/pdf?id=CFewUmgIIL" style="color: #007bff; text-decoration: none; margin-left: 8px; font-size: 16px;">[Paper]</a>
+                    <a href="https://github.com/ZhaoHongjue/odesteer" style="color: #007bff; text-decoration: none; margin-left: 8px; font-size: 16px;">[Code]</a>
+                </div>
+                <div>
+                    <span style="color: #666; line-height: 1.3; font-size: 14px;">A unified ODE-based framework for multi-step activation steering that achieves consistent gains on TruthfulQA (+5.7%), RealToxicityPrompts (+2.4%), and UltraFeedback (+2.5%).</span>
+                </div>
+            </div>
+        </li>
+        <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+            <div style="flex-shrink: 0; margin-right: 20px;">
+                <img src="/assets/img/behelm.png" alt="Benchmarking Infrastructure Overview" style="width: 350px; height: 200px; object-fit: contain; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+            <div style="flex: 1;">
+                <div style="margin-bottom: 8px;">
+                    <strong style="font-size: 18px;">Towards Comprehensive Benchmarking Infrastructure for LLMs In Software Engineering</strong>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <span style="font-size: 16px;">Daniel Rodriguez-Cardenas, <strong>Xiaochang Li</strong>, Marcos Macedo, Antonio Mastropaolo, Dipin Khati, Yuan Tian, Huajie Shao, Denys Poshyvanyk</span>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <span style="background: #007bff; color: white; padding: 4px 10px; font-size: 16px; font-weight: bold; border-radius: 3px; margin-right: 8px;">FORGE 2026</span>
+                    <a href="https://arxiv.org/pdf/2601.21070" style="color: #007bff; text-decoration: none; font-size: 16px;">[Paper]</a>
+                </div>
+                <div>
+                    <span style="color: #666; line-height: 1.3; font-size: 14px;">A holistic benchmarking infrastructure for evaluating LLMs in software engineering with multi-metric assessment across robustness, fairness, and real-world usability.</span>
+                </div>
+            </div>
+        </li>
+        <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+            <div style="flex-shrink: 0; margin-right: 20px;">
+                <img src="/assets/img/P3SL.png" alt="P3SL Method Overview" style="width: 350px; height: 200px; object-fit: contain; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+            <div style="flex: 1;">
+                <div style="margin-bottom: 8px;">
+                    <strong style="font-size: 18px;">P3SL: Personalized Privacy-Preserving Split Learning on Heterogeneous Edge Devices</strong>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <span style="font-size: 16px;">Wei Fan, JinYi Yoon, <strong>Xiaochang Li</strong>, Huajie Shao, Bo Ji</span>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <span style="background: #007bff; color: white; padding: 4px 10px; font-size: 16px; font-weight: bold; border-radius: 3px; margin-right: 8px;">ICCCN 2025</span>
+                    <a href="https://arxiv.org/pdf/2507.17228" style="color: #007bff; text-decoration: none; font-size: 16px;">[Paper]</a>
+                </div>
+                <div>
+                    <span style="color: #666; line-height: 1.3; font-size: 14px;">A personalized privacy-preserving approach for split learning that adapts to heterogeneous computational resources and privacy requirements across edge devices.</span>
+                </div>
+            </div>
+        </li>
+        <li style="display: flex; align-items: flex-start; margin-bottom: 20px;">
+            <div style="flex-shrink: 0; margin-right: 20px;">
+                <img src="/assets/img/netbench.png" alt="NetBench Dataset Overview" style="width: 350px; height: 200px; object-fit: contain; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+            <div style="flex: 1;">
+                <div style="margin-bottom: 8px;">
+                    <strong style="font-size: 18px;">NetBench: A Large-Scale and Comprehensive Network Traffic Benchmark Dataset for Foundation Models</strong>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <span style="font-size: 16px;">Chen Qian*, <strong>Xiaochang Li*</strong>, Qineng Wang, Gang Zhou, Huajie Shao</span>
+                </div>
+                <div style="margin-bottom: 8px;">
+                    <span style="background: #007bff; color: white; padding: 4px 10px; font-size: 16px; font-weight: bold; border-radius: 3px; margin-right: 8px;">FMSys 2024</span>
+                    <a href="https://arxiv.org/abs/2403.10319" style="color: #007bff; text-decoration: none; font-size: 16px;">[Paper]</a>
+                </div>
+                <div>
+                    <span style="color: #666; line-height: 1.3; font-size: 14px;">A comprehensive benchmark dataset for training and evaluating foundation models on network traffic analysis tasks.</span>
+                </div>
+            </div>
         </li>
     </ol>
 
-    <!-- <h3 id="journal-papers">Journal Papers</h3>
-    <ol>
+    <h3 style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; margin-top: 3rem; color: #333;">Service</h3>
+    <ul style="margin-bottom: 3rem;">
         <li>
+            <strong>Conference Reviewer</strong>
+            <ul>
+                <li>NeurIPS 2024 2025 2026</li>
+                <li>KDD 2024</li>
+            </ul>
         </li>
-    </ol> -->
-    <!-- <h3 id="workshop-papers">Workshop Papers</h3>
-    <ol>
         <li>
-
+            <strong>Workshop Reviewer</strong>
+            <ul>
+                <li>EACL 2026</li>
+                <li>AACL-IJCNLP 2025</li>
+                <li>EMNLP 2025</li>
+                <li>ACL 2025</li>
+                <li>EMNLP 2024</li>
+                <li>SeT LLM @ ICLR 2024</li>
+            </ul>
         </li>
-    </ol> -->
-    <h2>Service</h2>
-    <ul>
-        <li><strong>Conference Reviewer:</strong> KDD 2024, NeurIPS 2024&2025</li>
-        <li><strong>Workshop Reviewer:</strong> SeT LLM @ ICLR 2024, EMNLP Demo Track 2024&2025, ACL Demo Track 2025</li>
     </ul>
 </div>
+</section>
+
+<section id="talks">
+<div style="margin: 3rem 0;">
+    <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1rem; color: #333;">Talks</h2>
+    <div style="margin-bottom: 2rem;">
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li style="margin-bottom: 1rem;">
+                <strong>"Network Foundation Models for Cybersecurity"</strong> (Poster)<br>
+                <span style="color: #666;">DMV Security Workshop 2024, March 2024</span><br>
+                <a href="https://dmv-sec-workshop.github.io/" style="color: #007bff; text-decoration: none;">[Workshop]</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</section>
+
+<section id="honors">
+<div style="margin: 3rem 0;">
+    <h2 style="font-size: 1.8rem; font-weight: bold; margin-bottom: 1rem; color: #333;">Honors & Awards</h2>
+    <div style="margin-bottom: 2rem;">
+        <ul style="list-style: disc; padding-left: 20px;">
+            <li style="margin-bottom: 0.8rem;"><strong>Ph.D. Candidate Qualification</strong> - William & Mary (2024)</li>
+            <li style="margin-bottom: 0.8rem;"><strong>Outstanding Graduate</strong> - East China Normal University (2023)</li>
+            <li style="margin-bottom: 0.8rem;"><strong>Graduate Research Scholarship</strong> - William & Mary (2023-2027)</li>
+            <!-- Add more honors here -->
+        </ul>
+    </div>
+</div>
+</section>
 
 
